@@ -22,7 +22,7 @@ import JASP.Controls
 
 Form
 {	info: qsTr("The Correlation analysis allows estimation of the population correlation, as well as testing the null hypothesis that the population correlation between pairs of variables equals 0. All possible pairs of the specified variables are analyzed.\n") +
-	"## " + qsTr("Assumptions (Pearson's rho)") + "\n" + "- The variables are both continuous\n" + "- The data are a random sample from the population\n" + "- The relationship between the variables is linear\n" + "## " + qsTr("Assumptions (Spearman's rho and Kendall's tau)") +
+	"## " + qsTr("Assumptions (Pearson's rho)") + "\n" + "- The variables are both continuous\n" + "- The data are a random sample from the population\n" + "- The pairs of variables follow a bivariate normal distribution in the population\n" + "- The relationship between the variables is linear\n" + "## " + qsTr("Assumptions (Spearman's rho and Kendall's tau)") +
     "\n" + "- Ordinal or continuous variables\n" + "- The data are a random sample from the population\n" + "- The relationship between the pairs of variables is monotonic"
    
     VariablesForm
