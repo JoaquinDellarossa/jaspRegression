@@ -63,7 +63,7 @@ Group {
 			name:              "weights"
 			title:             family.currentValue === "binomial" ? qsTr("Total Number of Trials") : qsTr("Weights")
 			info: qsTr("Prior weights of the model. Mandatory when the binomial family is selected. In this case, the name changes to total Number of Trials, and the dependent variable now refers to the proportion of success (between 0 and 1).")
-			allowedColumns:    family.currentValue === "binomial" ? "nominal" : "scale"
+			allowedColumns:    ["scale"]
 			singleVariable:    true
 		}
 
