@@ -32,6 +32,7 @@ Section
 		{
 			id:							residualsSavedToData
 			name:						"residualsSavedToData"
+			info: qsTr("Save the residuals of the most complex model as a new column in the data file.")
 			text:						qsTr("Append residuals to data")
 
 			ComputedColumnField
