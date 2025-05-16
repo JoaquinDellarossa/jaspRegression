@@ -82,7 +82,7 @@ Form
 
 	Group
 	{
-		title: qsTr("Prior"); info: qsTr("\n") + "- Stretched beta prior width: Width of the scaled beta distribution on the correlation under the alterative hypothesis; default is 1. The lower this value, the more concentrated the prior density is around 0. Value must be between 0 and 2. "
+		title: qsTr("Prior"); info: qsTr("Stretched beta prior width: Width of the scaled beta distribution on the correlation under the alterative hypothesis; default is 1. The lower this value, the more concentrated the prior density is around 0. Value must be between 0 and 2.")
         FormulaField { name: "priorWidth"; label: qsTr("Stretched beta prior width"); defaultValue: "1.0"; min: 0.003; max: 2}
 	}
 
@@ -101,7 +101,7 @@ Form
 			name: "pairsMethod"
 			title: qsTr("Correlation coefficient to plot")
 			RadioButton {	value: "pearson";		label: qsTr("Pearson's rho"); info: qsTr("Pearson's product moment correlation coefficient."); checked:	true	}
-			RadioButton {	value: "spearman";		label: qsTr("Spearman's rho");	debug:		true	}
+			RadioButton {	value: "spearman";		label: qsTr("Spearman's rho"); debug:		true	}
 			RadioButton {	value: "kendall";		label: qsTr("Kendall's tau"); info: qsTr("Kendall's tau-b rank-order correlation coefficient to quantify the monotonic association between two variables by comparing concordant and non-concordant pairs.")						}
 		}
 
