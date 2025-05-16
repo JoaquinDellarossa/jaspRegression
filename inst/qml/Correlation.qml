@@ -37,7 +37,7 @@ Form
 	Group
 	{
 		title: qsTr("Sample Correlation Coefficient")
-		CheckBox { name: "pearson";			label: qsTr("Pearson's r"); info: qsTr("Pearson's product moment correlation coefficient. This is the famous r value"); checked: true	}
+		CheckBox { name: "pearson";			label: qsTr("Pearson's r"); info: qsTr("Pearson's product moment correlation coefficient. This is the famous r coefficient"); checked: true	}
 		CheckBox { name: "spearman";		label: qsTr("Spearman's rho"); info: qsTr("Spearman's rank-order correlation coefficient to quantify the monotonic association between two variables by ranking the observations. Use when data is not normally distributed")				}
 		CheckBox { name: "kendallsTauB";	label: qsTr("Kendall's tau-b"); info: qsTr("Kendall's tau-b rank-order correlation coefficient to quantify the monotonic association between two variables by comparing concordant and non-concordant pairs. Use when data is not normally distributed")			}
 	}
@@ -50,8 +50,7 @@ Form
 		CheckBox { name: "significanceFlagged";	label: qsTr("Flag significant correlations"); info: qsTr("Mark statistically significant correlations.")					}
 		CheckBox
 		{
-			name: "ci";		label: qsTr("Confidence intervals"); info: qsTr("Confidence intervals for the population correlation (only available for the Pearson correlation).\n") +
-			"\t" + "- Interval: Coverage of the confidence interval in percentages.\n" + "\t" + "- From ... bootstraps: By selecting this option, bootstrapped estimation is applied. By default, the number of replications is set to 1000. This can be changed into the desired number."
+			name: "ci";		label: qsTr("Confidence intervals"); info: qsTr("Confidence intervals for the population correlation (only available for the Pearson correlation). By default is set at 95% but the percentage can be changed. There is also an option to set up a bootstrap estimation, set at 1000 by default with the option to change it into the desired number.")
 			CIField { name: "ciLevel"; label: qsTr("Interval") }
 			CheckBox
 			{
@@ -91,10 +90,9 @@ Form
 		title: qsTr("Plots")
 		CheckBox
 		{
-			name: "scatterPlot";			label: qsTr("Scatter plots"); info: qsTr("Display a scatter plots for each possible combination of the selected variables. In a matrix format, these are placed above the diagonal.\n") +
-			"\t" + "- Densities for variables: Display histogram and the corresponding density plot for each variable. In a matrix format, these are placed on the diagonal.\n"  + "\t" + "- Statistics: Display the correlation coefficient(s) in the plot. This option also adds the x% confidence interval(s) as specified in the Confidence Intervals option."
-			CheckBox { name: "scatterPlotDensity";		label: qsTr("Densities for variables")	}
-			CheckBox { name: "scatterPlotStatistic";	label: qsTr("Statistics")				}
+			name: "scatterPlot";			label: qsTr("Scatter plots"); info: qsTr("Display a scatter plots for each possible combination of the selected variables. In a matrix format, these are placed above the diagonal.")
+			CheckBox { name: "scatterPlotDensity";		label: qsTr("Densities for variables"); info: qsTr("Display histogram and the corresponding density plot for each variable. In a matrix format, these are placed on the diagonal")	}
+			CheckBox { name: "scatterPlotStatistic";	label: qsTr("Statistics")	; info: qsTr("Display the correlation coefficient(s) in the plot. This option also adds the x% confidence interval(s) as specified in the Confidence Intervals option.")			}
             CheckBox
             {
 				name: "scatterPlotCi"; label: qsTr("Confidence intervals"); childrenOnSameRow: true
@@ -116,7 +114,7 @@ Form
 
 		Group
 		{
-			title: qsTr("Multivariate Normality"); info: qsTr("\n") + "\t" + "- Shapiro: Generalized Shapiro-Wilk test for multivariate normality by Villasenor-Alva and Gonzalez-Estrada (2009), using the mvShapiroTest package."
+			title: qsTr("Multivariate Normality"); info: qsTr("Shapiro: Generalized Shapiro-Wilk test for multivariate normality by Villasenor-Alva and Gonzalez-Estrada (2009), using the mvShapiroTest package.")
 			CheckBox { name: "assumptionCheckMultivariateShapiro"; label: qsTr("Shapiro")			   }
 			CheckBox { name: "assumptionCheckMultivariateRoyston"; label: qsTr("Royston"); debug: true  }
 			CheckBox { name: "assumptionCheckMultivariateMardia" ; label: qsTr("Mardia");  debug: true  }
@@ -125,7 +123,7 @@ Form
 
 		Group
 		{
-			title: qsTr("Pairwise Normality"); info: qsTr("\n") + "\t" + "- Shapiro: For each possible combination of the selected variables, computes the Shapiro-Wilk statistic to test the null hypothesis that the variable pair has a bivariate normal distribution."
+			title: qsTr("Pairwise Normality"); info: qsTr("Shapiro: For each possible combination of the selected variables, computes the Shapiro-Wilk statistic to test the null hypothesis that the variable pair has a bivariate normal distribution.")
 			CheckBox { name: "assumptionCheckPairwiseShapiro"; label: qsTr("Shapiro")			   }
 			CheckBox { name: "assumptionCheckPairwiseRoyston"; label: qsTr("Royston"); debug: true  }
 			CheckBox { name: "assumptionCheckPairwiseMardia" ; label: qsTr("Mardia");  debug: true  }
