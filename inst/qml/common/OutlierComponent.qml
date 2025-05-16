@@ -39,20 +39,20 @@ Group
 		columns: 2
 		RadioButtonGroup
 		{
-			name: "residualCasewiseDiagnosticType"
+			name: "residualCasewiseDiagnosticType"; info: qsTr("Casewise and sumamrized diagnostics for the residuals. There is an option to display diagnostics for cases where the absolut value of the standardized residual is larger than x (defaultis x=3). There is another option to display diagnostics for cases where the value of Cook’s distance is larger than x (default is x = 1.). And there is also an option to display diagnostics for all cases.")
 			RadioButton
-			{
-				value: "outliersOutside"; label: qsTr("Std. residual >"); info: qsTr("Outliers outside x standard deviations: Display diagnostics for cases where the absolute value of the standardized residual is larger than x; default is x=3.") ; checked: true
+			{	
+				value: "outliersOutside"; label: qsTr("Std. residual >"); checked: true
 				childrenOnSameRow: true
 				DoubleField { name: "residualCasewiseDiagnosticZThreshold"; defaultValue: 3	}
 			}
 			RadioButton
-			{
-				value: "cooksDistance";	label: qsTr("Cook's dist. >"); info: qsTr(" Display diagnostics for cases where the value of Cook’s distance is larger than x; default is x = 1.")
+			{	
+				value: "cooksDistance";	label: qsTr("Cook's dist. >")
 				childrenOnSameRow: true
 				DoubleField { name: "residualCasewiseDiagnosticCooksDistanceThreshold";	defaultValue: 1	}
 			}
-			RadioButton { value: "allCases"; label: qsTr("All")	; info: qsTr("Display diagnostics for all cases.")									}
+			RadioButton { value: "allCases"; label: qsTr("All")								}
 		}
 
 		Group
