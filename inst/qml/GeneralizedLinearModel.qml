@@ -65,9 +65,7 @@ Form
 			{
 				name: 	"availableTerms"
 				title: 	qsTr("Components")
-				info: qsTr("All the independent variables and covariates that can be included in the model.\n") +
-				"- Model terms: The terms representing the factors and covariates included in the model. By default, only the main effects are included.\n" +
-				"- Add to null model: Each model term can be added to the null model."
+				info: qsTr("All the independent variables and covariates that can be included in the model.") 
 				source: ['covariates', 'factors']
 				width: 	parent.width / 4
 			}
@@ -168,7 +166,7 @@ Form
 	{
 		title: qsTr("Advanced Options")
 		SetSeed {}
-		info: qsTr("\n") +  "- Set seeds: This gives you the possibility of setting a random seed for the plots and tables based on quantile residuals in the Diagnostics Section. Concretely, every time you generate a plot or a table based on quantile residuals, you get a slightly different plot or table because one step in the calculation of the quantile residuals involves drawing random values from a distribution. By setting a random seed of your choice here (the default is 1), you make sure that you can get exactly the same plots and tables based on quantile residuals."
+		info: qsTr("Set seeds: This gives you the possibility of setting a random seed for the plots and tables based on quantile residuals in the Diagnostics Section. Concretely, every time you generate a plot or a table based on quantile residuals, you get a slightly different plot or table because one step in the calculation of the quantile residuals involves drawing random values from a distribution. By setting a random seed of your choice here (the default is 1), you make sure that you can get exactly the same plots and tables based on quantile residuals.")
 		enabled: input.otherFamilyNotSelected
 	}
 

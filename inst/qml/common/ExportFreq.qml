@@ -49,6 +49,7 @@ Section
 		{
 			id:							predictionsSavedToData
 			name:						"predictionsSavedToData"
+			info: qsTr("Save the predictions of the most complex model as a new column in the data file")
 			text:						qsTr("Append predictions to data")
 
 			ComputedColumnField

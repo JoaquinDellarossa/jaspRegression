@@ -53,8 +53,7 @@ Section
 	{
 		name: "marginalMeansCi"
 		label: qsTr("Confidence interval")
-		info: qsTr(" Width/level of the confidence interval for the estimated marginal means.\n") +
-		"- Levels of covariates at mean +/-: What should be the levels of continuous variables (expressed in standard deviations) for which are the estimated marginal means computed. For instance, 1 means that the estimated marginal means for a covariate would be given at three values of the covariate, namely 1 SD below the mean, the mean, and 1 SD above the mean."
+		info: qsTr(" Width/level of the confidence interval for the estimated marginal means.") 
 		childrenOnSameRow: true
 		CIField { name: "marginalMeansCiWidth" }
 	}
