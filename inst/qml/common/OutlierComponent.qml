@@ -28,7 +28,7 @@ Group
 	CheckBox 
 	{ 
 		name: "residualStatistic"     
-		label: qsTr("Statistics") 
+		label: qsTr("Statistics") ; info: qsTr("Display descriptive statistics of the residuals and predicted values")
 		visible: analysis === Type.Analysis.LinearRegression
 	}
 	

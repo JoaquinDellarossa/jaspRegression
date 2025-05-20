@@ -121,8 +121,8 @@ Form
                     }
                 }
 
-				CheckBox { name: "coefficientStandardized";		label: qsTr("Standardized coefficients")	}
-				CheckBox { name: "oddsRatio";		label: qsTr("Odds ratios");		checked: true			}
+				CheckBox { name: "coefficientStandardized";		label: qsTr("Standardized coefficients"); info: qsTr("Standardized estimates represent estimates were the predictors are standardized (X-standardization).")	}
+				CheckBox { name: "oddsRatio";		label: qsTr("Odds ratios");	info: qsTr("Odds ratio is an indicator of the change in odds resulting from a unit change in the predictor.")	; checked: true			}
 				CheckBox
 				{
 								name: "coefficientCi";			label: qsTr("Confidence intervals"); info: qsTr("Coverage of the confidence intervals in percentages. The default value is 95.")
